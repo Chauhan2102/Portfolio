@@ -6,7 +6,11 @@
 }
 
 body {
+    margin: 0;
+   padding: 0;
     color: white;
+    background-color: #001529;
+   color: #fff;
 }
 
 .header {
@@ -14,7 +18,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 20px, 10px;
+    padding: 20px, 10%;
     background: transparent;
     display: flex;
     justify-content: space-between;
@@ -23,25 +27,25 @@ body {
 }
 
 .logo {
-    position: fixed;
+    position: relative;
     font-size: 25px;
     color: white;
     text-decoration: none;
     font-weight: 600px;
 }
 
-.navbar {
+.navbar a{
     display :inline-block;
     font-size:25px;
     color: white;
     text-decoration: none;
     font-weight: 500px;
     margin-left: 35px;
-    transition: 3s;
+    transition: 2s;
 }
 
 .navbar a:hover {
-    color: rgb(133, 234, 133)
+    color: rgb(0, 255, 21)
 }
 
 .home {
@@ -49,10 +53,77 @@ body {
     width: 100%;
     justify-content: space-between;
     height: 100vh;
-    background: url(Purple\Illustration\Mountain\Desktop\Wallpaper.png) no-repeat;
     background-size:cover;
     background-position: center;
     display: flex;
     align-items: center;
     padding: 70px 10% 0;
+}
+
+.home-content {
+    max-width: 600px;
+}
+
+.home-content h3 {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.home-content h1 {
+    font-size: 56px;
+    font-weight: 700;
+    margin: -3px 0;
+}
+
+.home-content p {
+    font-size: 20px;
+}
+
+.profile-image {
+    width: 25rem; /* 72px * 4 */
+    height: 25rem; /* 72px * 4 */
+    border-radius: 100%;
+    object-fit: cover;
+    border: 8px solid transparent;
+    padding: 8px;
+    background: linear-gradient(180deg, #7DE8C6 0%, #2d5438 100%);
+    box-shadow: 0 0 200px rgba(223, 234, 224, 0.8), 0 0 50px rgba(45, 186, 204, 0.938), 
+    0 0 50px rgba(93, 212, 95, 0.4);
+}
+
+.home-sci a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid rgb(0, 255, 85);
+    border-radius: 50%;
+    font-size: 20px;
+    color: rgb(0, 255, 21);
+    text-decoration: none;
+    margin: 30px 15px 30px 0;
+}
+
+.home-sci a:hover {
+    background: rgb(0, 255, 21);;
+    color: black;
+    box-shadow: 0 0 20px rgb(0, 255, 21);
+}
+
+.btn-box{
+    display: inline-block;
+    padding: 12px 28px;
+    background: rgb(0, 255, 21);
+    border-radius: 40px;
+    font-size:16px;
+    color: black;
+    letter-spacing: 1px;
+    text-decoration: none;
+}
+
+.btn-box:hover {
+    box-shadow: 0 0 5px greenyellow, 0 0 25px greenyellow,
+    0 0 50px greenyellow, 0 0 100px greenyellow;
 }
