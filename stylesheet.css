@@ -7,10 +7,9 @@
 
 body {
     margin: 0;
-   padding: 0;
-    color: white;
+    padding: 0;
+    color: #fff;
     background-color: #001529;
-   color: #fff;
 }
 
 .header {
@@ -18,12 +17,23 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 20px, 10%;
+    padding: 10px 10%;
     background: transparent;
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 100;
+    transition: background 0.3s, color 0.3s;
+}
+
+
+.header.scrolled{
+    background-color: white;
+    background: white;
+}
+
+.header.scrolled a {
+    color: #001529;
 }
 
 .logo {
@@ -31,17 +41,24 @@ body {
     font-size: 25px;
     color: white;
     text-decoration: none;
-    font-weight: 600px;
+    font-weight: 600;
+    cursor: default;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
 }
 
 .navbar a{
-    display :inline-block;
-    font-size:25px;
+    display: inline-block;
+    font-size: 20px;
     color: white;
     text-decoration: none;
-    font-weight: 500px;
+    font-weight: 200;
     margin-left: 35px;
-    transition: 2s;
+    margin-right: 15px;
+    transition: .3s;
+    opacity: 0;
+    animation: slideTop .5s ease forwards;
+    animation-delay: calc(.2s * var(--i));
 }
 
 .navbar a:hover {
@@ -54,6 +71,7 @@ body {
     justify-content: space-between;
     height: 100vh;
     background-size:cover;
+    background-color: #001529;
     background-position: center;
     display: flex;
     align-items: center;
@@ -67,27 +85,46 @@ body {
 .home-content h3 {
     font-size: 32px;
     font-weight: 700;
+    opacity: 0;
+    animation: slideBottom 1s ease forwards;
+    animation-delay: .7s;
+}
+
+.home-content h3 span  {
+    color: rgb(0, 255, 85);
+}
+
+.home-content h3:nth-of-type(2) {
+    margin-bottom:30px;
+    animation: slideTop 1s ease forwards;
+    animation-delay: .7s;
 }
 
 .home-content h1 {
     font-size: 56px;
     font-weight: 700;
     margin: -3px 0;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay: 1s;
 }
 
 .home-content p {
     font-size: 20px;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: 1s ;
 }
 
 .profile-image {
-    width: 25rem; /* 72px * 4 */
-    height: 25rem; /* 72px * 4 */
+    width: 28rem; /* 72px * 4 */
+    height: 28rem; /* 72px * 4 */
     border-radius: 100%;
     object-fit: cover;
     border: 8px solid transparent;
     padding: 8px;
-    background: linear-gradient(180deg, #7DE8C6 0%, #2d5438 100%);
-    box-shadow: 0 0 200px rgba(223, 234, 224, 0.8), 0 0 50px rgba(45, 186, 204, 0.938), 
+    background: linear-gradient(180deg, #bbcac5 0%,  #529b63 60%, #1a8f3b 100%);
+    box-shadow: 0 0 200px rgba(95, 239, 107, 0.8), 0 0 50px rgba(45, 186, 204, 0.938), 
     0 0 50px rgba(93, 212, 95, 0.4);
 }
 
@@ -104,6 +141,10 @@ body {
     color: rgb(0, 255, 21);
     text-decoration: none;
     margin: 30px 15px 30px 0;
+    transition: .5s ease;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: calc(.2s *var(--i));
 }
 
 .home-sci a:hover {
@@ -121,9 +162,127 @@ body {
     color: black;
     letter-spacing: 1px;
     text-decoration: none;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: 2s;
+    box-shadow: 0 0 10px rgb(47, 255, 89),
+    0 0 25px rgb(47, 255, 89);
 }
 
 .btn-box:hover {
     box-shadow: 0 0 5px greenyellow, 0 0 25px greenyellow,
-    0 0 50px greenyellow, 0 0 100px greenyellow;
+     0 0 100px greenyellow;
 }
+
+.about{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 1.5rem;  
+  
+}
+
+.about-img {
+    display: grid;
+    place-items: center;
+    width: 100%;
+}
+
+.about-img img{
+    width: 20rem; /* 72px * 4 */
+    height: 20rem; /* 72px * 4 */
+    border-radius: 100%;
+    margin-right: 15rem;
+    /*margin-bottom: 7rem; */
+    background: linear-gradient(180deg, #f8f9f8 0%,  #529b63 60%, #091f0f 100%);
+    box-shadow: 0 0 200px rgba(31, 32, 31, 0.8), 0 0 50px rgba(45, 186, 204, 0.938), 
+    0 0 50px rgba(93, 212, 95, 0.4);
+}
+.about-text {
+    display: inline-block;
+    margin-right: 60px;
+    place-items: center;
+    font-size: 50px;
+    height: 80%; /* Ensure the container takes the full height of the parent */
+    text-align: justify;
+    
+}
+
+.about-text h3 span {
+    color:rgb(0, 255, 21)
+}
+
+.about-text h4 {
+    font-size: 29px;
+    font-weight: 600;
+    color: #fff;
+    line-height:1.7;
+    
+}
+
+.about-text p {
+    color: aliceblue;
+    font-size: 19px;
+    line-height: 1.4;
+}
+
+.about-text p span {
+    color:rgb(0, 255, 21);
+    font-weight: 600;
+}
+
+
+.about-sci {
+   margin-bottom: 20px;
+}
+
+.container {
+    padding: 90px;
+    
+}
+
+@keyframes slideRight {
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+    
+}
+
+@keyframes slideLeft {
+    0%{
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+    
+}
+
+@keyframes slideTop {
+    0%{
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }    
+}
+@keyframes slideBottom {
+    0%{
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
