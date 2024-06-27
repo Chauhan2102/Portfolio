@@ -2,49 +2,118 @@
 <html lang="en">
 <head>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="stylesheet.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <title>Kashish Chauhan Personal Portfolio</title>
+    
 </head>
 <body>
     <header class="header">
         <a href="#" class="logo">PORTFOLIO</a>
+
         <nav class="navbar">
-            <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Skill</a>
-            <a href="#">Portfolio</a>
-            <a href="#">Contact</a>
+            <a href="#" style="--i:1" class="active">Home</a>
+            <a href="#" style="--i:2">About</a>
+            <a href="#" style="--i:3">Skill</a>
+            <a href="#" style="--i:4">Portfolio</a>
+            <a href="#" style="--i:5">Contact</a>
         </nav>
     </header>
     <selection class="home">
         <div class="home-content">
-            <h3>Hello It's Me</h3>
+            <h3>Hey! It's</h3>
             <h1>Kashish Chauhan</h1>
-            <h3>An Android Developer <span class="text"></span></h3>
-            <p>specialized Android development with impactful applications. 
-                <br>leveraging Java and Flutter/Dart to deliver seamless user experiences.</p>
+            <h3><span class="text"></span></h3>
+                <p>leveraging Java and Flutter/Dart to deliver seamless user experiences and many more...</p>
                 <div class="home-sci">
-                    <a href="#"><i class='bx bxl-instagram' ></i></a>
-                    <a href="#"><i class='bx bxl-linkedin' ></i></a>
-                    <a href="#"><i class='bx bxl-github' ></i></a>
-                    <a href="#"><i class='bx bxl-whatsapp' ></i></a>
+                    <a href="#" style="--i:7"><i class='bx bxl-instagram' ></i></a>
+                    <a href="#" style="--i:8"><i class='bx bxl-linkedin' ></i></a>
+                    <a href="#" style="--i:9"><i class='bx bxl-github' ></i></a>
+                    <a href="#" style="--i:10"><i class='bx bxl-whatsapp' ></i></a>
                 </div>
                 <a href="#" class="btn-box">More About Me</a>
         </div>
         <div class="home-image">
                 <img 
-                  src="images/Ana-bg.png" 
-                  alt="A person sitting on a bench, with a focused and contemplative look, surrounded by a gradient border glows in neon blue and pink colors" 
-                  alt="A person sitting on a bench, with a focused and contemplative look, surrounded by a gradient border glows in neon blue and pink colors" 
+                  src="images/Profile_2.png" 
+                  alt="My personal Image" 
                   class="profile-image"
                 />
             </div>
         </div>
     </selection>
+
+    <section class="about" id="about">
+        <div class="about-img">
+            <img src="images/Ana-bg.png"  alt="My personal Image"
+            />
+        </div>
+        <div class="about-text">
+            <h3>About<span>Me</span></h3>
+            <h4><span class="text"></span></h4>
+            <p>I am a Software Engineer with a passion for Web and Android App development,
+               along with knowledge in data analysis. 
+               Skilled in fostering strong communication with colleagues and clients.
+               My technical skills include:
+                <br><br>
+                <span>HTML:</span> Proficient in creating well-structured and semantic web pages.</span>
+                <br>
+                <span>Tailwind CSS:</span> Experienced in using utility-first CSS framework for designing responsive and modern interfaces.
+                <br>
+                <span>JAVA:</span> Skilled in scripting and building dynamic web applications.
+                <br>
+                <span>Python:</span> Knowledgeable in writing efficient code for various applications, including data analysis.
+                <br>
+                <span>JavaScript:</span> Proficient in building Android applications and backend systems.
+            </p>
+            <div class="home-sci">
+            <a href="#"><i class='bx bxl-android'></i></a>
+            <a href="#"><i class='bx bxl-html5' ></i></a>
+            <a href="#"><i class='bx bxl-tailwind-css'></i></a>
+            <a href="#"><i class='bx bxl-javascript'></i></a>
+            <a href="#"><i class='bx bxl-java'></i></a>
+            <a href="#"><i class='bx bxl-python'></i></a>
+            </div>
+            <a href="#" class="btn-box">More About Me</a>
+        </div>
+</section>
+
+<section>
+    <div class="services" id="services">
+    <div class="container">
+        <h1 class="sub-title">My<span>Services</span></h3>
+            <div>
+                <i class=""></i>
+                <h2>Frontend Development</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi, 
+                   dolorum tempora! Minus, asperiores facere atque obcaecation.</p>
+                   <a href="#" class="read">Learn More</a>
+            </div>
+            <div>
+                <i class="">
+                <h2>Frontend Development</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi, 
+                   dolorum tempora! Minus, asperiores facere atque obcaecation.</p>
+                   <a href="#" class="read">Learn More</a>
+                </i>
+            </div>
+            <div>
+                <i class='bx bx-code-alt' style='color:#63dd1e'></i>
+                <h2>Frontend Development</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi, 
+                   dolorum tempora! Minus, asperiores facere atque obcaecation.</p>
+                   <a href="#" class="read">Learn More</a>
+                </i>
+            </div>
+        </div>
+    </div>
+</section>  
+
+    <script src="main.js"></script>
 </body>
 </html>
